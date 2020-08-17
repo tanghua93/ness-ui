@@ -1,21 +1,7 @@
 <p align="center"><img src="https://github.com/tanghua93/upload-img-files/blob/master/logo.png" width="150" height="150"/></p>
 <p align="center">NESS-UI</p>
-<p align="center">基于React开发的移动端UI组件库</p>
+<p align="center">基于React开发的移动端UI组件库>><a href="https://tanghua93.github.io/ness-ui-doc" target="_blank">Live Demo</a></p>
 
-
-
-
-## 技术栈及工具
-
-🔥 Typescript with React Hooks
-
-⛑️ 使用Jest + Enzyme测试工具进行组件单元测试
-
-📃 使用dumi进行文档编写
-
-## 演示地址
-
-<a href="https://tanghua93.github.io/ness-ui-doc" target="_blank">点击查看</a>
 
 ## 安装
 ```js
@@ -53,5 +39,6 @@ module.exports = {
 ``` js
     import { Button } from 'ness-ui'
 ```
+## License
 
-
+<a href="https://github.com/tanghua93/ness-ui/blob/master/LICENSE" target="_blank">babel-plugin-component</a>
