@@ -1,7 +1,9 @@
 <p align="center"><img src="https://github.com/tanghua93/upload-img-files/blob/master/logo.png" width="150" height="150"/></p>
 <p align="center">NESS-UI</p>
+<p align="center">基于React开发的移动端UI组件库</p>
 
-基于React开发的移动端UI组件库 📦
+
+
 
 ## 技术栈及工具
 
