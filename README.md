@@ -1,6 +1,6 @@
 <p align="center"><img src="https://github.com/tanghua93/upload-img-files/blob/master/logo.png" width="150" height="150"/></p>
 <p align="center">NESS-UI</p>
-<p align="center">基于React开发的移动端UI组件库>><a href="https://tanghua93.github.io/ness-ui-doc" target="_blank">Live Demo</a></p>
+<p align="center">基于React开发的移动端UI组件库<a href="https://tanghua93.github.io/ness-ui-doc" target="_blank">Live Demo>></a></p>
 
 
 ## 安装
