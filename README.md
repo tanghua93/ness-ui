@@ -41,4 +41,4 @@ module.exports = {
 ```
 ## License
 
-<a href="https://github.com/tanghua93/ness-ui/blob/master/LICENSE" target="_blank">babel-plugin-component</a>
+<a href="https://github.com/tanghua93/ness-ui/blob/master/LICENSE" target="_blank">MIT</a>
