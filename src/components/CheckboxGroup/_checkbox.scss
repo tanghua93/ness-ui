@@ -1,0 +1,12 @@
+@import "../../styles/base";
+// Labels
+label {
+  display: block;
+  font-size: $form-label-fontsize;
+  margin-bottom: $form-label-margin;
+  color: $form-label-color;
+  > input{
+    margin-top: $form-label-margin;
+  }
+}
+

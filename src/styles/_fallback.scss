@@ -1,0 +1,19 @@
+@mixin fixes-flexbox-for-android {
+  display: block;
+}
+
+// flex-basis fallback
+@mixin flex-basis-fallback($width) {
+  @if $legacy-flexbox-support {
+    .#{$android-legacy-flexbox} & {
+      width: $width;
+    }
+  }
+}
+@mixin navbar-item-android-uc-fallback() {
+  @if $legacy-flexbox-support {
+    .#{$android-legacy-flexbox} & {
+      display: inline-block;
+    }
+  }
+}

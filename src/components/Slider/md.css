@@ -1,0 +1,30 @@
+h3{
+    background: #5f9ea0;
+    color: #fff;
+    font-size: 36px;
+    line-height: 100px;
+    margin-right: 10px;
+    padding: 0px 0px;
+    position: relative;
+    text-align: center;
+}
+.slick-thumb li{
+  width: 60px !important;
+  height: 45px !important;
+}
+.slick-thumb {
+    left: -16px;
+    bottom: -55px !important;
+}
+img {
+    max-width: 100%;
+    margin: 0 0 1.45rem;
+    padding: 0;
+}
+.center{
+  margin-left: -15px;
+}
+.center .slick-center h3{
+  color: red;
+  background-color: blueviolet;
+}

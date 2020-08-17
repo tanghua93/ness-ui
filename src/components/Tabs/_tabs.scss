@@ -1,0 +1,192 @@
+@import "../../styles/base";
+.#{$tabBarPrefixClass} {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  z-index: 1;
+
+  &-tab {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 14px;
+    background: #fff;
+  }
+
+  &-tab-active {
+    color: $tabs-color;
+  }
+
+  &-underline {
+    position: absolute;
+    border: 1px $tabs-color solid;
+  }
+
+  &-animated &-content {
+    transition: transform $effect-duration $easing-in-out;
+    will-change: transform;
+  }
+
+  &-animated &-underline {
+    transition: top $effect-duration $easing-in-out,
+      left $effect-duration $easing-in-out,
+      color $effect-duration $easing-in-out,
+      width $effect-duration $easing-in-out;
+    will-change: top, left, width, color;
+  }
+
+  &-top,
+  &-bottom {
+    flex-direction: row;
+
+    .#{$tabBarPrefixClass} {
+      &-content {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+      }
+
+      &-tab {
+        padding: 8px 0;
+      }
+
+      &-underline {
+        bottom: 0;
+      }
+    }
+  }
+
+  &-top {
+    border-bottom: 1px #eee solid;
+  }
+
+  &-bottom {
+    border-top: 1px #eee solid;
+  }
+
+  &-left,
+  &-right {
+    flex-direction: column;
+
+    .#{$tabBarPrefixClass} {
+      &-content {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+      }
+
+      &-tab {
+        padding: 0 8px;
+      }
+    }
+  }
+
+  &-left {
+    border-right: 1px #eee solid;
+
+    .#{$tabBarPrefixClass} {
+      &-underline {
+        right: 0;
+      }
+    }
+  }
+
+  &-right {
+    border-left: 1px #eee solid;
+
+    .#{$tabBarPrefixClass} {
+      &-underline {
+        left: 0;
+      }
+    }
+  }
+}
+.#{$tabsPrefixClass} {
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
+
+  display: flex;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+
+  &-content-wrap {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+
+    &-animated {
+      transition: transform $effect-duration $easing-in-out, left $effect-duration $easing-in-out, top $effect-duration $easing-in-out;
+      will-change: transform, left, top;
+    }
+  }
+
+  &-content {
+    width: 100%;
+    flex-shrink: 0;
+    overflow-y: auto;
+  }
+
+  &-tab-bar-wrap {
+    flex-shrink: 0;
+  }
+
+  &-horizontal {
+    .#{$tabsPrefixClass} {
+      &-content-active {
+        height: auto;
+      }
+
+      &-content-inactive {
+        height: 0;
+        overflow: visible;
+      }
+    }
+  }
+
+  &-vertical {
+    .#{$tabsPrefixClass} {
+      &-content-wrap {
+        flex-direction: column;
+      }
+
+      &-tab-bar-wrap {
+        height: 100%;
+      }
+
+      &-content {
+        height: 100%;
+      }
+
+      &-content-active {
+        overflow: auto;
+      }
+
+      &-content-inactive {
+        overflow: hidden;
+      }
+    }
+  }
+
+  &-top,
+  &-bottom {
+    flex-direction: column;
+  }
+
+  &-left,
+  &-right {
+    flex-direction: row;
+  }
+}

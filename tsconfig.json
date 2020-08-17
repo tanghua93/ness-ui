@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+   "outDir": "dist",
+   "module": "esnext",
+    "target": "es5",
+    "declaration": true,
+    "declarationDir": "./lib",
+    "allowJs": true,
+    "jsx": "react",
+    "suppressImplicitAnyIndexErrors":true,
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+  },
+  "include": [
+    "src/*.ts"
+  ],
+  "exclude": [
+    "src/**/*.test.tsx",
+    "src/**/*.stories.tsx",
+    "src/setupTests.ts",
+    "src/utils/*.ts",
+  ]
+}

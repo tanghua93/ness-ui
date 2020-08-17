@@ -1,0 +1,72 @@
+@import "../../styles/base";
+@mixin progress-size($size: $button-font-size) {
+  height: $size;
+}
+.#{$progress-prefix} {
+    position: relative;
+    background-color: #efefef;
+    > span {
+        display: block;
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        & > span {
+            position: absolute;
+            width: 100%;
+			top: 0; left: 0; bottom: 0; right: 0;
+           
+            z-index: 1;
+            background-size: $progress-stripe-height $progress-stripe-height;
+            overflow: hidden;
+		}
+    }
+    &-animate > span > span {
+        animation: move 2s linear infinite;
+    }
+    &-stripes > span > span {
+         background-image:
+			   -webkit-gradient(linear, 0 0, 100% 100%,
+			      color-stop(.25, rgba(255, 255, 255, .2)),
+			      color-stop(.25, transparent), color-stop(.5, transparent),
+			      color-stop(.5, rgba(255, 255, 255, .2)),
+			      color-stop(.75, rgba(255, 255, 255, .2)),
+			      color-stop(.75, transparent), to(transparent)
+			   );
+    }
+    &-rounded{
+        border-radius: $global-rounded;
+        & > span, & > span > span{
+            border-top-left-radius: $global-rounded;
+			border-bottom-left-radius: $global-rounded;
+        }
+    }
+    &-unfilled{
+        background-color:transparent;
+    }
+}
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: $progress-positon $progress-positon;
+    }
+}
+
+
+@each $size-key, $size-size in $am-sizes {
+  .#{$progress-prefix}-#{$size-key} {
+    @include progress-size($size-size / 3);
+    & > span{
+        font-size: $size-size / 2.5;
+        line-height: $size-size / 2;
+    }
+  }
+}
+@each $color-key, $color in $am-colors {
+ .#{$progress-prefix}-#{$color-key} > span{
+     background-color: $color;
+  }
+}
